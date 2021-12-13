@@ -7,16 +7,24 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { MenuComponent } from './menu/menu.component';
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './app.routes';
+
 @NgModule({
   declarations: [
     AppComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    SignUpComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
